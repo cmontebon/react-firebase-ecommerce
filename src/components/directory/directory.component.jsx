@@ -3,7 +3,7 @@ import './directory.styles.scss';
 
 import MenuItem from '../menu-item/menu-item.component';
 
-import SHOP_DATA from '../../fixtures/sections.data.js';
+import SHOP_DATA from '../../fixtures/shop.data.js';
 
 class Directory extends React.Component {
     constructor(){
