@@ -21,8 +21,9 @@ const BlogPage = (props) => (
 )
 
 const BlogDetails = (props) => {
+  console.log(props.match)
   console.log(props.match.params)
-  return <div><h1>Blog Details Page: ID - {props.match.params.blogId}</h1></div>
+  return <div><h1>Blog Category - {props.match.params.category}</h1></div>
 }
 
 function App() {
@@ -33,8 +34,8 @@ function App() {
         <Route exact path='/' component={HomePage}/>
         <Route exact path='/about' component={AboutPage} />
       </Switch>
-      <Route path='/blog' component={BlogPage}/>
-      <Route exact path='/blog/:blogId' component={BlogDetails} />
+      <Route path='/shop' component={BlogPage}/>
+      <Route exact path='/shop/:category' component={BlogDetails} />
     </div>
     </BrowserRouter>
   );
