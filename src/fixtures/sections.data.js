@@ -1,4 +1,4 @@
-const SHOP_DATA = [
+const SHOP_SECTIONS = [
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -34,4 +34,4 @@ const SHOP_DATA = [
     }
 ]
 
-export default SHOP_DATA
+export default SHOP_SECTIONS

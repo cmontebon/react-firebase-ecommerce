@@ -3,13 +3,13 @@ import './directory.styles.scss';
 
 import MenuItem from '../menu-item/menu-item.component';
 
-import SHOP_DATA from '../../fixtures/sections.data.js';
+import SHOP_SECTIONS from '../../fixtures/sections.data.js';
 
 class Directory extends React.Component {
     constructor(){
         super();
         this.state = {
-            sections: SHOP_DATA
+            sections: SHOP_SECTIONS
         }
     }
       
