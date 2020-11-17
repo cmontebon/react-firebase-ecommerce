@@ -1,4 +1,9 @@
 body {
-    font-family: 'Cinzel', serif;
+    font-family: 'Ubuntu', sans-serif;
     padding: 20px 60px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
