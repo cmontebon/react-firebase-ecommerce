@@ -3,14 +3,14 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: process.env.FB_APIKEY,
-    authDomain: process.env.FB_AUTH_DOMAIN,
-    databaseURL: process.env.FB_DB_URL,
-    projectId: process.env.FB_PROJ_ID,
-    storageBucket: process.env.FB_STORAGE_BUCKET,
-    messagingSenderId: process.env.FB_MSG_ID,
-    appId: process.env.FB_APP_ID,
-    measurementId: process.env.FB_MEASUREMENT_ID,
+    apiKey: process.env.REACT_APP_FB_APIKEY,
+    authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_FB_DB_URL,
+    projectId: process.env.REACT_APP_FB_PROJ_ID,
+    storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FB_MSG_ID,
+    appId: process.env.REACT_APP_FB_APP_ID,
+    measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
   };
 
 firebase.initializeApp(config);
