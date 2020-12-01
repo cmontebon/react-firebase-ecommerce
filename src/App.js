@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 import {
   Route,
-  Switch,
-  Link
+  Switch
 } from 'react-router-dom';
 
 import Header from './components/header/header.component';
@@ -36,6 +35,8 @@ class App extends React.Component{
                 ...snapShot.data()
               }
             })
+
+            console.log(this.state);
         })
       } else {
         this.setState({ currentUser: userAuth })
