@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import CollectionPage from '../../pages/category/collection.component';
+import CollectionPage from '../../pages/collection/collection.component';
 import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
 
 import './shop.styles.scss'
