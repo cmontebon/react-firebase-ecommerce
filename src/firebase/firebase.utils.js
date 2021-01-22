@@ -3,15 +3,15 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: process.env.REACT_APP_FB_APIKEY,
-    authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
-    databaseURL: process.env.REACT_APP_FB_DB_URL,
-    projectId: process.env.REACT_APP_FB_PROJ_ID,
-    storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FB_MSG_ID,
-    appId: process.env.REACT_APP_FB_APP_ID,
-    measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
-  };
+  apiKey: process.env.REACT_APP_FB_APIKEY,
+  authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FB_DB_URL,
+  projectId: process.env.REACT_APP_FB_PROJ_ID,
+  storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FB_MSG_ID,
+  appId: process.env.REACT_APP_FB_APP_ID,
+  measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
+};
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
@@ -37,6 +37,18 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   }
 
   return userRef;
+}
+
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+  const collectionRef = firestore.collection(collectionKey);
+  
+  const batch = firestore.batch();
+  objectsToAdd.forEach(obj => {
+    const newDocRef = collectionRef.doc();
+    batch.set(newDocRef, obj);
+  });
+
+  await batch.commit();
 }
 
 firebase.initializeApp(config);
