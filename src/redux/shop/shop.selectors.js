@@ -19,3 +19,8 @@ export const selectShopCollection = (collectionId) => (
     )
 )
 
+export const selectIsCollectionFetching = createSelector(
+    [selectShop],
+    shop => shop.isFetching
+)
+
