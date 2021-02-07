@@ -14,24 +14,17 @@ const userReducer = (state = INITIAL_STATE, action) => {
           ...state,
           isLoading: true,
         }
-      case UserActionTypes.GOOGLE_SIGN_IN_SUCCESS:
-      case UserActionTypes.EMAIL_SIGN_IN_SUCCESS:
+      case UserActionTypes.SIGN_IN_SUCCESS:
         return {
           ...state,
           isLoading: false,
           currentUser: action.payload,
         }
-      case UserActionTypes.GOOGLE_SIGN_IN_FAILURE:
-      case UserActionTypes.EMAIL_SIGN_IN_FAILURE:
+      case UserActionTypes.SIGN_IN_FAILURE:
         return {
           ...state,
           isLoading: false,
           error: action.payload
-        }
-      case UserActionTypes.SET_CURRENT_USER:
-        return {
-            ...state,
-            currentUser: action.payload
         }
       default:
         return state
